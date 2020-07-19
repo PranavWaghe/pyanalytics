@@ -116,11 +116,14 @@ namez
 #numpy - array - same data type
 import numpy
 numpy.array([10,20])
-
 import numpy as np #np is alias
 np1 = np.arange(1,10)
+np1
+print(np1)
 x=np.arange(start=1,stop=1000000,step=2)
+x=np.arange(start=1000,stop=0,step=-10)
 len(x)
+x
 x[1:100]
 x[1:50:10]
 np
@@ -184,7 +187,8 @@ import statsmodels.api as sm
 #https://vincentarelbundock.github.io/Rdatasets/datasets.html
 mtcars = sm.datasets.get_rdataset(dataname='mtcars', package= 'datasets')
 mtcars.data.head()
-
+mtcars.data.columns
+mtcars.data.tail()
 #%%
 #Load from Excel/ CSV and export to
 data = mtcars.data
